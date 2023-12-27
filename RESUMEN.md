@@ -143,7 +143,7 @@ console.log(saludarHolaMundo());
     * Eliminar un archivo. => `fs.unlink`
     * Renombrar un archivo. => `fs.unlinkSync`
 
-> Mas detalles de como se aplican en el siguiente archivo [Modulo fs](<2 - Modulos de Node/9 - El Modulo fs/app.js> 'Haz Click Aquí')
+> Mas detalles de como se aplican en el siguiente archivo [Modulo fs](<../profe/2 - Modulos de Node/9 - El Modulo fs> 'Haz Click Aquí') 
 ---
 <h2 class="subtitle">📦 2. <u>Paquetes, npm y Json</u>:</h2>
 
@@ -155,12 +155,12 @@ console.log(saludarHolaMundo());
 <div class="title_container"><img src="https://imgs.search.brave.com/YC2Trw5quq3j1VDRwBez2fR_0QsaHWT17SPREJa0PKI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9raW5z/dGEuY29tL2VzL3dw/LWNvbnRlbnQvdXBs/b2Fkcy9zaXRlcy84/LzIwMjIvMDcvcXVl/LWVzLW5wbS0xMDI0/eDUxMi5wbmc" alt="módulos de node" class="subtitle_img" style="border: 2px solid grey;"></div>
 
 * Es un compendio de paquetes enorme que puedes usar en node. Para ello debes instalarlo. 
-* También es una linea de comandos. 
+* También es una herramienta de linea de comandos. 
 * Los paquetes de npm están en formato Json y se reconocen por el archivo package.json. 
 * Cuando trabajamos con npm se crea automáticamente la carpeta node_modules que contiene todos los paquetes que hemos instalado y que podemos importar en nuestro proyecto.
 * Dependencia: es un paquete necesario para que otro paquete funcione correctamente. (Paquete: es un archivo que contiene código que se puede usar en otros proyectos.).
 
-#### <u class="subtitle">Como crear mi archivo Json con npm?</u>
+#### <u class="subtitle">Como crear mi archivo Json con npm? (Paquete de node)</u>
 
 * Primero creamos la carpeta contenedora dentro del proyecto.
 * Ubicado dentro de la carpeta, vamos a ejecutar el comando `npm init`.
@@ -174,3 +174,52 @@ console.log(saludarHolaMundo());
   * Si damos enter, nos creara el archivo package.json.
 
 * Si queremos crear un archivo con todos los valores por defecto, solo debemos ejecutar el código `npm init --yes`.
+
+#### <u class="subtitle">Que es Json? (JavaScript Object Notation)</u>
+
+* Es un formato de texto usado para almacenar y transportar información. 
+
+* NO ES LENGUAJE DE PROGRAMACIÓN. 
+
+* Esta basado en JavaScript.
+
+* Nos permite almacenar objetos de JS como texto.
+
+#### <p class="subtitle" style='text-align:center'><u>Características de Json</u></p>
+
+* Los datos se representan como **pares clave-valor** (propiedades y su valor).
+
+* Estos pares están rodeados de llaves {...}.
+
+* Deben separarse por comas. El ultimo par, puede no llevar coma.
+
+* Las claves deben ser cadenas de caracteres, pero sus valores pueden ser:
+
+  * Cadenas de caracteres.
+  * Números.
+  * Arreglos(arrays).
+  * Valores Booleanos.
+  * Objetos.
+
+####  <u>Podemos convertir un formato Json a un arreglo JS y viceversa.</u>
+
+* `JSON.parse()` => convierte un Json a JS.
+* `JSON.stringify()` => convierte un JS a Json.
+---
+> No hay archivos en las carpetas sobre esto, por eso lo pongo en notas.
+> Se menciona como instalar Express, que son los paquetes? y los paquetes que se instalan con Express y se guardan en una nueva carpeta 'nd_module'.
+
+> Para instalar usamos => `npm install express`
+
+> Para instalar una version especifica de express usamos => `npm install express@4.15.1`
+
+> Cuando los programadores comparten sus proyectos, no incluyen la carpeta de módulos de node, pero dentro del package.json están especificadas las dependencias que se usaron y que son necesarias para que el proyecto funcione correctamente. A estas dependencias las podemos instalar con el siguiente comando => `npm install`.
+
+> Si instalamos una dependencia con esta linea de comando => `npm install express --save -dev` de guardara en una sección especial que nos permite tenerlas a mano durante el desarrollo de nuestro proyecto y una vez terminado las podremos eliminar mas fácil.
+
+> ***package-lock.json***: se genera automáticamente cuando se modifica en árbol de npm(la carpeta node_module) o el package.json. Describe el árbol para que podamos instalarlo igual en el futuro, generando el mismo árbol.
+---
+
+<h2 class="subtitle">🎉 3. <u>JavaScript Asíncrono</u>:</h2>
+
+### <u class="subtitle">Eventos</u>:
